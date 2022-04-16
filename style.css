@@ -1,0 +1,244 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    /* background:url('https://images.unsplash.com/photo-1472145246862-b24cf25c4a36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80'); */
+    
+    background: url("https://media.istockphoto.com/photos/weather-forecast-concept-picture-id531889697?b=1&k=20&m=531889697&s=170667a&w=0&h=imZl8VcPhgj-6jTFFkYGbVTFOTyQ-u93Z9WsyhMdqps=");
+    background-repeat: no-repeat;
+    background-size:cover;
+    /* overflow:hidden; */
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+#main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+}
+
+.date-container{
+  font-weight: 100;
+  color: #eee;
+  margin: 20px;;
+}
+.date-container .time{
+ font-size: 50px;
+}
+.date-container #am-pm{
+ font-size: 25px;
+ margin-left: 20px;
+}
+.date-container .date{
+ font-size: 25px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+    color: white;
+    background: rgba(24,24,27,0.6);
+    border-radius: 30px;
+    border: 1px solid white;
+    margin: 25px ; 
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 50;
+    width: 400px;
+    height: 45vh;
+    
+}
+#cityName{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  /* margin: 2px; */
+}
+.temp{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 2px; */
+}
+
+#iconsCont{
+    background: rgba(24,24,27,0.8);
+    position: fixed;
+    padding: 25px;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    display: flex;
+    height: 47vh;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.tempicon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search{
+    display: flex;
+    padding-top: 10px;
+   }
+
+   
+.icons{
+    width: 180px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background: rgba(0,0,0,0.2);
+}
+ .icons #day1,#day2,#day3,#day4,#day5{
+    padding: 2px 15px;
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+     
+}
+
+.icons .minVal, .maxVal{
+    font-weight:100;
+    font-size: 20px;
+    padding:2px;
+     
+}
+
+ #iconsCont :hover{
+    box-shadow: 10px 10px 10px 0 rgba(233, 225, 225, 0.3);
+     transform :scale(1.1);
+ }
+
+
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 20px;
+    width: calc(100% - 100px);
+  }
+  
+  button:hover {
+    background: #7c7c7c6b;
+  }
+  
+  h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+  }
+  
+  .flex {
+   
+      display: flex;
+      flex-direction: column;
+      /* padding-bottom: 10px; */
+      align-items: center;
+      justify-content:space-between;
+    }
+     
+ 
+  
+  .description {
+    text-transform: capitalize;
+    margin-left: 8px;
+  }
+  
+  .weather-loading {
+     
+     font-size: 20px;
+    position: relative;
+  }
+  
+   @media only screen and  (max-width:700px){
+    
+    #main{
+        padding: 2px;
+        /* display: flex; */
+             } 
+     
+    #weatherCont{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+   .card{
+    
+     font-size: 10px;
+    width: 200px;
+    }
+   
+    .date-container .time{
+        font-size: 20px;
+    }
+
+    .date-container #am-pm{
+        font-size: 15px;
+    }
+
+    .date-container .date{
+        font-size: 20px;
+    }
+
+    .date-container{
+        text-align: end;
+        margin-top: 15px;
+        font-size: 20px;
+    } 
+
+    /* .place-container .time-zone{
+        font-size: 20px;
+    }    */
+
+ 
+    .weather-loading{
+        font-size: 14px;
+        padding: 12px;
+    } 
+
+  }
+
+  
+   
